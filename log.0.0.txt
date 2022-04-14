@@ -1,0 +1,4 @@
+апр 13, 2022 6:39:29 AM org.apache.http.impl.execchain.RetryExec execute
+INFO: I/O exception (java.net.SocketException) caught when processing request to {s}->https://api.telegram.org:443: Connection reset
+апр 13, 2022 6:39:29 AM org.apache.http.impl.execchain.RetryExec execute
+INFO: Retrying request to {s}->https://api.telegram.org:443
