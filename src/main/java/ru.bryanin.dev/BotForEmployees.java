@@ -20,7 +20,7 @@ public class BotForEmployees extends TelegramLongPollingBot{
     private final String BOT_NAME = "luis_assistant_bot";
     private final String BOT_TOKEN = "1810970755:AAHLTRWvAQ_JOb6E88qxavVVyskgsVB2H8w";
     private final Logger logger = LoggerFactory.getLogger(BotForEmployees.class);
-    FileHandler fileHandler;
+//    FileHandler fileHandler;
 
     @Override
     public String getBotUsername() {

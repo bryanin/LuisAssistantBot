@@ -14,9 +14,16 @@ import java.util.logging.LogManager;
 
 public class Application {
     static Logger LOGGER;
+//    static {
+//        try(FileInputStream fileInputStream = new FileInputStream("/home/bryanin/IdeaProjects/LuisAssistantBot/src/main/resources/log.config")){
+//            LogManager.getLogManager().readConfiguration(fileInputStream);
+//            LOGGER = LoggerFactory.getLogger(Application.class);
+//        }catch (Exception ignore){
+//            ignore.printStackTrace();
+//        }
+//    }
     static {
-        try(FileInputStream fileInputStream = new FileInputStream("/home/bryanin/IdeaProjects/LuisAssistantBot/src/main/resources/log.config")){
-            LogManager.getLogManager().readConfiguration(fileInputStream);
+        try {
             LOGGER = LoggerFactory.getLogger(Application.class);
         }catch (Exception ignore){
             ignore.printStackTrace();
