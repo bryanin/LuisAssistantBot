@@ -1,1 +1,1 @@
-worker: java -jar target/untitled.jar
+worker: java -jar target/LuisAssistantBot-1.0-SNAPSHOT.jar
