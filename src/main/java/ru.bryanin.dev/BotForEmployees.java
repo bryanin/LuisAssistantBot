@@ -10,17 +10,14 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMar
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.FileHandler;
 
 public class BotForEmployees extends TelegramLongPollingBot{
 
     private final String BOT_NAME = "luis_assistant_bot";
     private final String BOT_TOKEN = "1810970755:AAHLTRWvAQ_JOb6E88qxavVVyskgsVB2H8w";
-    private final Logger logger = LoggerFactory.getLogger(BotForEmployees.class);
-//    FileHandler fileHandler;
+    private static final Logger logger = LoggerFactory.getLogger(BotForEmployees.class);
 
     @Override
     public String getBotUsername() {

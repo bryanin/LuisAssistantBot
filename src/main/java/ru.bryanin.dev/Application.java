@@ -1,40 +1,24 @@
 package ru.bryanin.dev;
 
+import org.apache.logging.log4j.Level;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.LogManager;
 
 public class Application {
-    static Logger LOGGER;
-//    static {
-//        try(FileInputStream fileInputStream = new FileInputStream("/home/bryanin/IdeaProjects/LuisAssistantBot/src/main/resources/log.config")){
-//            LogManager.getLogManager().readConfiguration(fileInputStream);
-//            LOGGER = LoggerFactory.getLogger(Application.class);
-//        }catch (Exception ignore){
-//            ignore.printStackTrace();
-//        }
-//    }
-    static {
-        try {
-            LOGGER = LoggerFactory.getLogger(Application.class);
-        }catch (Exception ignore){
-            ignore.printStackTrace();
-        }
-    }
+
+    private static final Logger logger = LoggerFactory.getLogger(Application.class);
+
     public static void main(String[] args) {
-        LOGGER.info("Start application...");
+        logger.info("Start application...");
+
         try {
             TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
             botsApi.registerBot(new BotForEmployees());
-            LOGGER.info("Register Bot...");
+            logger.info("Register Bot...");
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }
