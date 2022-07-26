@@ -56,7 +56,7 @@ public class BotForEmployees extends TelegramLongPollingBot{
                     menuLevel[1] = 0;
                     menuLevel[2] = 0;
                     menuLevel[3] = 0;
-                    stringBuilder.append("Чтобы скачать нужный Вам каталог оборудования, выберите соответствующий пункт меню. \n");
+                    stringBuilder.append("Чтобы скачать нужный Вам каталог, выберите соответствующий пункт меню. \n");
                     stringBuilder.append("На текущий момент представлены каталоги на оборудование LTV, LPA, ЛКД, ЛПТ. \n");
                     sendMsg(menuLevel, message, stringBuilder.toString());
                     logger.info(userFirstName + " " + userLastName + ": '1. Каталоги'");

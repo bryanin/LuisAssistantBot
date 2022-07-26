@@ -9,6 +9,7 @@
         </File>
         <Jdbc name="LogToDatabase" tableName="log">
             <DriverManager connectionString="jdbc:postgresql://localhost:5432/luis_assistant_bot" driverClassName="org.postgresql.Driver" username="bryanin" password="1Q2w3e4r"  />
+<!--            <DriverManager connectionString="jdbc:postgresql://ec2-52-212-228-71.eu-west-1.compute.amazonaws.com:5432/d411u4lmds2jn5" driverClassName="org.postgresql.Driver" username="daqaolaeqskobk" password="5983702ab312d9928903e31f96fa7eb47c5b365e44affb6e4fac8d950428b784"  />-->
             <Column name="event_date" isEventTimestamp="true" />
             <Column name="level" pattern="%level" isUnicode="false" />
             <Column name="logger" pattern="%logger{36}" isUnicode="false"/>

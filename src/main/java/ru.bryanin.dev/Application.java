@@ -1,11 +1,15 @@
 package ru.bryanin.dev;
 
-import org.apache.logging.log4j.Level;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
+import ru.bryanin.dev.util.ConnectionManager;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 
 public class Application {
@@ -22,6 +26,18 @@ public class Application {
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }
+
+//        try {
+//            Connection connection = ConnectionManager.getConnection();
+//            Statement statement = connection.createStatement();
+//            ResultSet resultSet = statement.executeQuery("SELECT * FROM log;");
+//            System.out.println(resultSet.getArray(1));
+//            connection.close();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            logger.error(e.toString());
+//        }
+
 
 //        // Поиск в папке "2.2. Паспорта и руководства LPA"
 //        SearchFile searchFile = new SearchFile("lx");
